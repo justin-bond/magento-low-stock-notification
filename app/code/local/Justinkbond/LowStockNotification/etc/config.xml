@@ -5,4 +5,17 @@
             <version>0.0.1</version>
         </Justinkbond_LowStockNotification>
     </modules>
+    <global>
+        <events>
+            <cataloginventory_stock_item_save_after>
+                <observers>
+                    <lowstock_stock_item_save>
+                        <type>singleton</type>
+                        <class>Justinkbond_LowStockNotification_Model_Observer</class>
+                        <method>lowStockReport</method>
+                    </lowstock_stock_item_save>
+                </observers>
+            </cataloginventory_stock_item_save_after>
+        </events>
+    </global>
 </config>
