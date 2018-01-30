@@ -1,0 +1,1 @@
+# magento low stock notification
